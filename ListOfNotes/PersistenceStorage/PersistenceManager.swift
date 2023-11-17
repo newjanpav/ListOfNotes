@@ -38,7 +38,11 @@ class RealmManager: PersistenceManager {
     }
     
     func remove(item: TODOListItem) {
-        
+        if let object = realm.object(ofType: TODOListItemObject.self, forPrimaryKey: String(item.createdDate.timeIntervalSince1970)) {
+            try? realm.write {
+                realm.delete(object)
+            }
+        }
     }
     
     func loadAllItems() -> [TODOListItem]? {

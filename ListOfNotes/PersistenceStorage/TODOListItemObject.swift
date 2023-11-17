@@ -1,7 +1,6 @@
 //
 //  TODOListItemObject.swift
 //  ListOfNotes
-//
 //  Created by Pavel Shymanski on 15.11.23.
 //
 
