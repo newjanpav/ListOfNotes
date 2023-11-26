@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-protocol PersistenceManager {
-    func save(item: TODOListItem)
-    func remove(item: TODOListItem)
-    func loadAllItems() -> [TODOListItem]?
-}
 
 
 
@@ -110,7 +105,6 @@ extension TODOListViewController: TODOListDataSourceDelegate {
         
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
-        
     }
 }
     

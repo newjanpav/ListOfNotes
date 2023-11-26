@@ -8,6 +8,14 @@
 import Foundation
 import RealmSwift
 
+
+protocol PersistenceManager {
+    func save(item: TODOListItem)
+    func remove(item: TODOListItem)
+    func loadAllItems() -> [TODOListItem]?
+}
+
+
 class RealmManager: PersistenceManager {
     private var realm: Realm!
         private var schemaVersion: UInt64 = 8
